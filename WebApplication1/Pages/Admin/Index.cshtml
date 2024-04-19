@@ -1,0 +1,25 @@
+﻿@page
+@model WebApplication1.Pages.Admin.IndexModel
+@{
+}
+
+<p>Mode développement</p>
+
+<h1>Identifiez-vous</h1>
+
+<br/>
+
+@if (Model.DisplayInvalidAccountMessage)
+{
+    <div class="alert alert-danger" role="alert">
+        Erreur: Ce compte est invalide
+    </div>
+}
+
+<form method="post">
+    <input type="text" name="username" placeholder="Login">
+    <br/>
+    <input type="password" name="password" placeholder="Mot de passe">
+    <br/>
+    <button>Se connecter</button>
+</form>
